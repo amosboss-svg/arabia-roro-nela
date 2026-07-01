@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARABIA — Roro Nela · Présentation & écoute</title>
+<meta name="description" content="Arabia — nouveau single de Roro Nela, sortie le 17 juillet 2026. Écoute du master, kit de presse et stratégie de lancement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EC; --paper:#F5EEDD; --paper-2:#F0E6D2;
+    --ink:#2C2118; --ink-soft:#5a4b3a; --line:#e2d5bd;
+    --gold:#C9A24B; --gold-deep:#A9812f; --gold-soft:#E0C58A;
+    --terra:#B0492F; --blue:#1F5C77; --sage:#6f7f5e;
+    --green:#0e3a2b; --green-deep:#082018;
+    --title:'Marcellus',serif; --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',sans-serif; --ar:'Amiri',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  html[data-lang="fr"] .en{display:none}
+  html[data-lang="en"] .fr{display:none}
+  section{padding:clamp(46px,6.5vw,90px) clamp(22px,6vw,80px);max-width:1140px;margin:0 auto}
+  .eyebrow{font-family:var(--sans);font-weight:400;letter-spacing:.36em;text-transform:uppercase;font-size:12px;color:var(--gold-deep)}
+  h2{font-family:var(--title);font-weight:400;font-size:clamp(28px,4.4vw,46px);line-height:1.08;margin:.35em 0 .5em}
+  h3{font-family:var(--title);font-weight:400;font-size:clamp(19px,2.4vw,23px);margin-bottom:.3em}
+  p{margin-bottom:1em}em{font-style:italic}
+  strong{font-weight:600;color:var(--terra)}
+  a{color:var(--gold-deep)}
+  .rule{height:2px;width:70px;background:var(--gold);margin:0 0 26px}
+  .lead{font-size:clamp(20px,2.6vw,26px);line-height:1.5;color:#3a2c1d}
+
+  /* nav + lang */
+  .topbar{position:sticky;top:0;z-index:50;background:#0c332595;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff18}
+  .topbar-in{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:11px clamp(16px,4vw,40px);gap:12px}
+  .brand{font-family:var(--title);color:#f6efe0;font-size:17px;letter-spacing:.14em;text-decoration:none}
+  .brand b{color:var(--gold-soft);font-weight:400}
+  .nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .nav a{font-family:var(--sans);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:#e4d8bf;text-decoration:none;transition:.2s}
+  .nav a:hover{color:var(--gold-soft)}
+  .langbar{display:flex;gap:3px;background:#00000030;padding:4px;border-radius:100px}
+  .langbar button{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#e9dcc2;background:transparent;border:0;padding:5px 11px;border-radius:100px;cursor:pointer}
+  html[data-lang="fr"] .langbar .l-fr,html[data-lang="en"] .langbar .l-en{background:var(--gold);color:#1c140d}
+  @media(max-width:720px){.nav a:not(.cta){display:none}}
+
+  /* hero */
+  .hero{background:radial-gradient(120% 120% at 80% 15%,#12463322,transparent),linear-gradient(160deg,var(--green),var(--green-deep));color:#f6efe0;max-width:none;text-align:center;position:relative;overflow:hidden}
+  .hero .kick{font-family:var(--sans);letter-spacing:.42em;text-transform:uppercase;font-size:13px;color:var(--gold-soft)}
+  .hero h1{font-family:var(--title);font-weight:400;font-size:clamp(58px,13vw,140px);line-height:.86;letter-spacing:.05em;margin:.14em 0 .06em;color:#fff}
+  .hero .ar{font-family:var(--ar);font-size:clamp(26px,5vw,42px);color:var(--gold-soft)}
+  .hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3vw,30px);color:#efe6d3;margin-top:.25em}
+  .badge{display:inline-flex;align-items:center;gap:9px;margin-top:24px;font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#0c2c20;background:linear-gradient(180deg,var(--gold-soft),var(--gold));padding:10px 22px;border-radius:100px;font-weight:500}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:#0c2c20;animation:blink 1.6s ease-in-out infinite}
+  @keyframes blink{50%{opacity:.25}}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+  .btn{font-family:var(--sans);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;border-radius:100px;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:0}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#20180d;font-weight:500}
+  .btn-gold:hover{filter:brightness(1.07)}
+  .btn-ghost{border:1px solid #ffffff40;color:#f6efe0;background:transparent}
+  .btn-ghost:hover{background:#ffffff14;border-color:var(--gold-soft)}
+  /* hero frequency rings */
+  .fx{position:absolute;left:50%;top:32%;transform:translate(-50%,-50%);pointer-events:none;opacity:.5}
+  .fx span{position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;border:1px solid var(--gold-soft);transform:translate(-50%,-50%);animation:rip 5s ease-out infinite}
+  .fx span:nth-child(2){animation-delay:1.6s}.fx span:nth-child(3){animation-delay:3.2s}
+  @keyframes rip{0%{opacity:.5;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(46)}}
+
+  /* player */
+  .player-wrap{background:var(--green);color:#f4ecdb;max-width:none;margin:0}
+  .player{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:clamp(24px,5vw,48px);align-items:center}
+  .player .cover{border-radius:12px;overflow:hidden;box-shadow:0 30px 70px -28px #000;aspect-ratio:1/1}
+  .player .cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .player h2{color:#fff;margin-top:.1em}
+  .meta{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+  audio{width:100%;margin:18px 0 8px;filter:sepia(.2) saturate(1.1)}
+  .note{font-family:var(--sans);font-size:13px;color:#c9bda4;letter-spacing:.02em;line-height:1.5}
+  .listen-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .yt{background:#c9302c;color:#fff}
+  .yt:hover{filter:brightness(1.08)}
+
+  /* generic layout */
+  .two{display:grid;grid-template-columns:1.2fr .85fr;gap:clamp(28px,5vw,56px);align-items:start}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 26px}
+  .card h3{color:var(--green)}
+  .card p{font-size:16.5px;line-height:1.55;color:#43372a}
+  .card .tagn{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:8px}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+  .figure{border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -28px #4a3a2555;border:1px solid var(--line)}
+  .figure img{width:100%;display:block}
+  .cap{font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#9c8a6d;margin-top:8px}
+
+  /* strategy pillars numbered */
+  .pill{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 26px;position:relative}
+  .pill .n{font-family:var(--title);font-size:15px;color:#fff;background:var(--green);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .pill h3{color:var(--green)}
+  .pill p{font-size:16px;color:#43372a;line-height:1.55}
+  .pill ul{list-style:none;font-size:15.5px;color:#43372a;margin-top:6px}
+  .pill li{padding:5px 0 5px 20px;position:relative;line-height:1.4}
+  .pill li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .pin{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:var(--green);background:#fff;border:1px solid var(--line);padding:6px 13px;border-radius:100px}
+
+  /* monochrome social visual demo */
+  .grey-demo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
+  .gv{aspect-ratio:1/1;border-radius:12px;position:relative;overflow:hidden;background:linear-gradient(160deg,#2b2b2b,#141414);border:1px solid #00000018;display:flex;align-items:center;justify-content:center}
+  .gv .rings{position:absolute;inset:0}
+  .gv .rings i{position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;border:1px solid #ffffff3a;transform:translate(-50%,-50%);animation:rip2 4.5s ease-out infinite}
+  .gv .rings i:nth-child(2){animation-delay:1.5s}.gv .rings i:nth-child(3){animation-delay:3s}
+  @keyframes rip2{0%{opacity:.45;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(20)}}
+  .gv span{position:relative;font-family:var(--title);color:#e9e9e9;letter-spacing:.14em;font-size:15px;z-index:2;text-align:center;padding:0 10px}
+  .gv small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;color:#9a9a9a;margin-top:6px}
+  .gv.reveal{background:linear-gradient(160deg,var(--green),var(--green-deep))}
+  .gv.reveal span{color:var(--gold-soft)}
+  .gv.reveal .rings i{border-color:#e0c58a55}
+
+  /* guardrail callout */
+  .callout{background:var(--green);color:#f4ecdb;border-radius:16px;padding:clamp(26px,4vw,40px);text-align:center}
+  .callout p{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.8vw,27px);margin:0}
+  .callout span{font-family:var(--sans);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-top:14px}
+
+  /* resources */
+  .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  .res a{display:block;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:.2s;color:var(--ink)}
+  .res a:hover{border-color:var(--gold);background:#fff;transform:translateY(-2px)}
+  .res b{font-family:var(--title);font-weight:400;font-size:21px;color:var(--green);display:block;margin-bottom:4px}
+  .res small{font-family:var(--sans);font-size:13px;color:var(--ink-soft);letter-spacing:.02em}
+
+  /* socials */
+  .socials{display:flex;flex-wrap:wrap;gap:12px}
+  .soc{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:14px;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:11px 18px;border-radius:100px;transition:.2s}
+  .soc:hover{border-color:var(--gold);background:#fff}
+  .soc svg{width:17px;height:17px;fill:var(--green)}
+
+  footer{background:var(--green-deep);color:#cdbd9c;text-align:center;padding:44px 20px;font-family:var(--sans);font-size:12.5px;letter-spacing:.1em;line-height:1.8}
+  footer a{color:var(--gold-soft);text-decoration:none}
+  .disc{font-family:var(--sans);font-size:12px;color:#9c8a6d;letter-spacing:.02em;line-height:1.5;margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+
+  /* lyrics trilingual */
+  .lyrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+  .lyr{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .lyr h3{color:var(--green);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+  .lyr .body{white-space:pre-line;font-size:18px;line-height:1.7;color:#3a2c1d}
+  .lyr.rtl{direction:rtl;text-align:right}
+  .lyr.rtl h3,.lyr.rtl .body{font-family:var(--ar)}
+  .lyr.rtl .body{font-size:21px}
+  .lyr .pending{font-family:var(--sans);font-size:13.5px;letter-spacing:.02em;color:#9c8a6d;font-style:normal;line-height:1.6}
+  /* pullquote */
+  .pullquote{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.45;color:#33261a;border-left:3px solid var(--gold);padding-left:18px;margin:14px 0 4px}
+  .pullquote span{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-top:8px}
+
+  /* rétro-planning timeline */
+  .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .step{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:22px 22px;break-inside:avoid}
+  .step .when{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:7px}
+  .step h3{color:var(--green);font-size:21px;margin-bottom:6px}
+  .step p{font-size:15.5px;line-height:1.5;color:#43372a;margin:0}
+  .step.j{border-top-color:var(--terra)}.step.j .when{color:var(--terra)}
+
+  @media(max-width:820px){.two,.player{grid-template-columns:1fr}.player .cover{max-width:300px;margin:0 auto}.lyrics{grid-template-columns:1fr}}
+
+  /* print → clean paginated PDF */
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .topbar{display:none!important}
+    html[data-lang="en"] .fr,html[data-lang="fr"] .en{display:none}
+    body{font-size:11.5pt}
+    section,.player{padding:22px 26px}
+    section{break-inside:avoid}
+    h2,h3{break-after:avoid}
+    .card,.pill,.step,.val,.q,.lyr,.res a,.figure,.callout,.two>div{break-inside:avoid}
+    .hero,.player-wrap{break-inside:avoid}
+    audio,.btn,.listen-actions{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top">RORO NELA · <b>ARABIA</b></a>
+    <nav class="nav">
+      <a href="#message" class="fr">Le message</a><a href="#message" class="en">The message</a>
+      <a href="#ecouter" class="fr">Écouter</a><a href="#ecouter" class="en">Listen</a>
+      <a href="#retro" class="fr">Rétro-planning</a><a href="#retro" class="en">Timeline</a>
+      <a href="#strategie" class="fr">Stratégie</a><a href="#strategie" class="en">Strategy</a>
+      <a href="kit-presse.html" class="cta fr">Kit de presse</a><a href="kit-presse.html" class="cta en">Press kit</a>
+      <div class="langbar"><button class="l-fr" onclick="setLang('fr')">FR</button><button class="l-en" onclick="setLang('en')">EN</button></div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <span class="kick fr">Roro Nela · Nouveau single</span><span class="kick en">Roro Nela · New single</span>
+  <h1>ARABIA</h1>
+  <div class="ar">عربية</div>
+  <p class="tag fr">Une déclaration d'amour, de fierté et d'unité.</p>
+  <p class="tag en">A declaration of love, pride and unity.</p>
+  <p class="kick fr" style="margin-top:10px;letter-spacing:.06em;text-transform:none;font-size:15px;color:#d9cbb0">La fierté qui devient lumière.</p>
+  <p class="kick en" style="margin-top:10px;letter-spacing:.06em;text-transform:none;font-size:15px;color:#d9cbb0">Pride that turns into light.</p>
+  <div class="badge"><span class="dot"></span><span class="fr">Sortie le 17 juillet 2026</span><span class="en">Out July 17, 2026</span></div>
+  <div class="hero-actions">
+    <a class="btn btn-gold" href="#ecouter"><span class="fr">▶ Écouter le master</span><span class="en">▶ Listen to the master</span></a>
+    <a class="btn btn-ghost" href="cover-animee.html"><span class="fr">Cover animée</span><span class="en">Animated cover</span></a>
+    <a class="btn btn-ghost" href="kit-presse.html"><span class="fr">Kit de presse</span><span class="en">Press kit</span></a>
+  </div>
+</header>
+
+<!-- LE MESSAGE D'ARABIA -->
+<section id="message">
+  <span class="eyebrow fr">Le message du titre</span><span class="eyebrow en">The message of the track</span>
+  <h2 class="fr">Une déclaration d'amour, de fierté et d'unité</h2>
+  <h2 class="en">A declaration of love, pride and unity</h2>
+  <div class="rule"></div>
+  <div class="two">
+    <div>
+      <p class="lead fr">Avec <em>Arabia</em>, Roro Nela signe son morceau le plus personnel : une déclaration d'amour à ses racines, à sa culture et aux <strong>femmes arabes</strong> du monde entier.</p>
+      <p class="lead en">With <em>Arabia</em>, Roro Nela delivers her most personal track: a declaration of love to her roots, her culture and <strong>Arab women</strong> everywhere.</p>
+      <p class="fr">Un autre regard sur l'identité arabe, loin des clichés — celui d'une femme moderne, libre et forte, sensible et douce, parce que la sensibilité est une force. Le Liban en est le cœur ; le propos, lui, est universel : où que l'on aille, on reste lié à sa source.</p>
+      <p class="en">A different image of Arab identity, far from clichés — that of a modern, free and strong woman, sensitive and gentle, because tenderness is a strength. Lebanon is its heart; the message is universal: wherever you go, you stay bound to your source.</p>
+      <p class="fr"><em>Arabia</em> bâtit un pont entre les cultures, les générations et les identités. Tout s'y conclut sur un sentiment : <strong>la fierté</strong> — porter son histoire avec amour plutôt qu'avec colère. C'est là toute sa lumière.</p>
+      <p class="en"><em>Arabia</em> builds a bridge between cultures, generations and identities. It ends on one feeling: <strong>pride</strong> — carrying one's history with love rather than anger. That is its light.</p>
+      <p class="pullquote fr">« Je voulais montrer qu'il n'y a aucune honte à être arabe. Au contraire — il faut en être fier. »<span>Roro Nela</span></p>
+      <p class="pullquote en">"I wanted to show there is no shame in being Arab. On the contrary — it's something to be proud of."<span>Roro Nela</span></p>
+    </div>
+    <div>
+      <div class="figure"><img src="assets/photo-desert.jpg" alt="Roro Nela"></div>
+      <div class="cap fr">Roro Nela — libanaise, élevée entre le Liban et Dubaï, aujourd'hui entre la France et l'Europe. Chanteuse, autrice, productrice &amp; peintre.</div>
+      <div class="cap en">Roro Nela — Lebanese, raised between Lebanon and Dubai, today between France and Europe. Singer, songwriter, producer &amp; painter.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAROLES (trilingue) — juste au-dessus de l'écoute -->
+<section id="paroles-chanson" style="background:var(--paper-2)">
+  <span class="eyebrow fr">Les paroles · عربية · Français · English</span><span class="eyebrow en">Lyrics · عربية · Français · English</span>
+  <h2 class="fr">Paroles & traductions</h2>
+  <h2 class="en">Lyrics & translations</h2>
+  <div class="rule"></div>
+  <p class="lead fr">Le texte tel qu'elle le chante, en arabe — puis traduit fidèlement, mot pour mot dans son sens, en français et en anglais. À lire en écoutant le titre, ci-dessous.</p>
+  <p class="lead en">The words as she sings them, in Arabic — then faithfully translated, true to their meaning, into French and English. To read while listening to the track, below.</p>
+  <!-- ▼▼▼ À COMPLÉTER : coller les paroles arabes ici, puis les traductions FR/EN (une ligne = une ligne). ▼▼▼ -->
+  <div class="lyrics">
+    <div class="lyr rtl">
+      <h3>العربية</h3>
+      <div class="body pending fr">Les paroles arabes seront insérées ici, telles que Roro Nela les chante — à fournir ou à valider par l'artiste.</div>
+      <div class="body pending en">The Arabic lyrics will go here, exactly as Roro Nela sings them — to be provided or validated by the artist.</div>
+    </div>
+    <div class="lyr">
+      <h3>Français</h3>
+      <div class="body pending fr">La traduction française, fidèle au sens de chaque phrase, sera alignée ici ligne par ligne.</div>
+      <div class="body pending en">The French translation, faithful to each line's meaning, will be aligned here line by line.</div>
+    </div>
+    <div class="lyr">
+      <h3>English</h3>
+      <div class="body pending fr">La traduction anglaise, fidèle au sens, sera alignée ici ligne par ligne.</div>
+      <div class="body pending en">The English translation, faithful to the meaning, will be aligned here line by line.</div>
+    </div>
+  </div>
+  <!-- ▲▲▲ FIN paroles ▲▲▲ -->
+  <p class="cap fr" style="margin-top:14px">Paroles à insérer / valider avec l'artiste — les traductions FR & EN seront faites mot pour mot, fidèles au texte chanté.</p>
+  <p class="cap en" style="margin-top:14px">Lyrics to be inserted / validated with the artist — the FR & EN translations will be done word for word, true to the sung text.</p>
+</section>
+
+<!-- ÉCOUTER -->
+<div class="player-wrap" id="ecouter">
+  <div class="player">
+    <div class="cover"><img src="assets/cover-provisoire.jpg" alt="ARABIA — Roro Nela"></div>
+    <div>
+      <span class="meta fr">Le single · Master final</span><span class="meta en">The single · Final master</span>
+      <h2>ARABIA</h2>
+      <p class="note fr">Version <strong style="color:var(--gold-soft)">master final (Wave 4)</strong> — le son destiné à la sortie. Durée 3:38.</p>
+      <p class="note en">Version <strong style="color:var(--gold-soft)">final master (Wave 4)</strong> — the release-ready mix. Length 3:38.</p>
+      <audio controls preload="metadata" src="assets/Arabia-Master-Final4.m4a"></audio>
+      <div class="listen-actions">
+        <!-- ▼ Remplacer le href ci-dessous par le vrai lien YouTube une fois la vidéo/visualizer mis en ligne -->
+        <a class="btn yt" id="ytLink" href="https://www.youtube.com/@roro_nela" target="_blank" rel="noopener"><span class="fr">▶ Regarder sur YouTube</span><span class="en">▶ Watch on YouTube</span></a>
+        <a class="btn btn-gold" href="#" onclick="return false"><span class="fr">Pré-save · à venir</span><span class="en">Pre-save · coming</span></a>
+      </div>
+      <p class="note" style="margin-top:14px;opacity:.75">
+        <span class="fr">↳ Astuce : pour intégrer une vidéo YouTube ici, mets d'abord ta vidéo en ligne (chaîne <a href="https://www.youtube.com/@roro_nela" style="color:var(--gold-soft)">@roro_nela</a>), puis colle son lien à la place du bouton ci-dessus.</span>
+        <span class="en">↳ Tip: to embed a YouTube video here, upload it first (channel <a href="https://www.youtube.com/@roro_nela" style="color:var(--gold-soft)">@roro_nela</a>), then paste its link in place of the button above.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- RÉTRO-PLANNING -->
+<section id="retro" style="background:var(--paper-2)">
+  <span class="eyebrow fr">Rétro-planning</span><span class="eyebrow en">Timeline</span>
+  <h2 class="fr">De l'annonce à l'EP — le déroulé</h2>
+  <h2 class="en">From announcement to EP — the plan</h2>
+  <div class="rule"></div>
+  <p class="lead fr">Le fil conducteur : capter du contenu à chaque étape, Roro Nela toujours mise en avant — du teaser au clip, jusqu'à l'EP.</p>
+  <p class="lead en">The through-line: capture content at every step, Roro Nela always in front — from teaser to video, all the way to the EP.</p>
+  <div class="timeline" style="margin-top:24px">
+    <div class="step">
+      <span class="when fr">Dès maintenant → mi-juillet</span><span class="when en">Now → mid-July</span>
+      <h3 class="fr">Fondations</h3><h3 class="en">Foundations</h3>
+      <p class="fr">Pré-save ouvert. Teasers « gris » (mystère). Annonce de la cover &amp; de la date via la cover animée.</p>
+      <p class="en">Pre-save live. "Grey" teasers (mystery). Cover &amp; date announced via the animated cover.</p>
+    </div>
+    <div class="step">
+      <span class="when fr">Semaine du 17</span><span class="when en">Week of the 17th</span>
+      <h3 class="fr">Montée</h3><h3 class="en">Build-up</h3>
+      <p class="fr">1 post/jour. Presse &amp; pitch playlists/radios. Lancement du mouvement « Nour ».</p>
+      <p class="en">1 post/day. Press &amp; playlist/radio pitching. Launch of the "Nour" movement.</p>
+    </div>
+    <div class="step j">
+      <span class="when fr">Vendredi 17 juillet · Jour J</span><span class="when en">Friday July 17 · Release</span>
+      <h3 class="fr">Sortie du single</h3><h3 class="en">Single release</h3>
+      <p class="fr">Le master final. Visuels acoustiques — oud &amp; percussions, le duo traditionnel. Bascule en couleurs.</p>
+      <p class="en">The final master. Acoustic visuals — oud &amp; percussion, the traditional duo. Colour reveal.</p>
+    </div>
+    <div class="step">
+      <span class="when fr">≈ J+7 · Liban</span><span class="when en">≈ D+7 · Lebanon</span>
+      <h3 class="fr">Le clip</h3><h3 class="en">The video</h3>
+      <p class="fr">Tournage du clip au Liban, sous la direction de <strong>Tareck Raffoul</strong>. Captation de contenus.</p>
+      <p class="en">Music video shot in Lebanon, directed by <strong>Tareck Raffoul</strong>. Content capture.</p>
+    </div>
+    <div class="step">
+      <span class="when fr">Rentrée · dès septembre</span><span class="when en">Autumn · from September</span>
+      <h3 class="fr">Cap Moyen-Orient</h3><h3 class="en">Middle-East push</h3>
+      <p class="fr">Sortie du clip, presse &amp; radios du Moyen-Orient, prises de parole (IMA / Arabofolies, saisons culturelles).</p>
+      <p class="en">Video release, Middle-East press &amp; radio, public platforms (IMA / Arabofolies, cultural seasons).</p>
+    </div>
+    <div class="step">
+      <span class="when fr">Décembre 2026</span><span class="when en">December 2026</span>
+      <h3 class="fr">L'EP</h3><h3 class="en">The EP</h3>
+      <p class="fr">Arabia ouvre un projet plus large — l'EP attendu pour décembre 2026.</p>
+      <p class="en">Arabia opens a wider project — the EP due December 2026.</p>
+    </div>
+  </div>
+  <p class="cap fr" style="margin-top:18px">Teasers réseaux « gris » (mystère) → bascule en couleurs le jour J. Déclinables en 1:1, 9:16 et 16:9.</p>
+  <p class="cap en" style="margin-top:18px">"Grey" social teasers (mystery) → colour reveal on release day. Adaptable in 1:1, 9:16 and 16:9.</p>
+</section>
+
+<!-- STRATÉGIE MOYEN-ORIENT -->
+<section id="strategie">
+  <span class="eyebrow fr">Stratégie de lancement · Cap Moyen-Orient</span><span class="eyebrow en">Launch strategy · Middle-East focus</span>
+  <h2 class="fr">En parler au maximum, partout où la racine résonne</h2>
+  <h2 class="en">Talk about it everywhere the root resonates</h2>
+  <div class="rule"></div>
+  <p class="lead fr">Le fil rouge : <strong>un maximum de contenu</strong> sur le titre, avec Roro Nela toujours mise en avant. À chaque étape on capte des images, on les monte, on entretient la conversation — d'abord vers le Liban et le Moyen-Orient, puis la France et l'Europe.</p>
+  <p class="lead en">The through-line: <strong>a maximum of content</strong> around the track, with Roro Nela always in front. At every step we capture footage, edit it, keep the conversation alive — first toward Lebanon and the Middle East, then France and Europe.</p>
+
+  <div class="grid g2" style="margin-top:26px">
+    <!-- 1 attaché de presse -->
+    <div class="pill">
+      <div class="n">1</div>
+      <h3 class="fr">Un·e attaché·e de presse dédié·e</h3><h3 class="en">A dedicated press officer</h3>
+      <p class="fr">Recruter un·e attaché·e de presse qui prend la suite pour aller chercher les articles et <strong>maximiser la couverture</strong>. Objectif : défendre le titre sur les radios et médias du Moyen-Orient (Liban en tête) et en France, avec un flux constant de visuels et de contenus à l'appui.</p>
+      <p class="en">Bring in a press officer to take over, land articles and <strong>maximise coverage</strong>. Goal: champion the track on Middle-East radio and media (Lebanon first) and in France, backed by a constant flow of visuals and content.</p>
+    </div>
+    <!-- 2 radios -->
+    <div class="pill">
+      <div class="n">2</div>
+      <h3 class="fr">Radios — Moyen-Orient & France</h3><h3 class="en">Radio — Middle East & France</h3>
+      <ul>
+        <li class="fr"><strong style="color:var(--green)">Liban / Moyen-Orient</strong> : radios nationales & musicales libanaises, via l'attaché·e et le distributeur local.</li>
+        <li class="en"><strong style="color:var(--green)">Lebanon / Middle East</strong>: Lebanese national & music stations, via the press officer and the local distributor.</li>
+        <li class="fr"><strong style="color:var(--green)">France</strong> : Radio Orient (94.3, Paris), Beur FM, Allzic Orientale, et des web-radios orientales.</li>
+        <li class="en"><strong style="color:var(--green)">France</strong>: Radio Orient (94.3, Paris), Beur FM, Allzic Orientale, and Oriental web-radios.</li>
+        <li class="fr">Angle : une artiste franco-libanaise, un titre en arabe — parfait pour ces antennes.</li>
+        <li class="en">Angle: a French-Lebanese artist, a track in Arabic — a perfect fit for these stations.</li>
+      </ul>
+    </div>
+    <!-- 3 playlists -->
+    <div class="pill">
+      <div class="n">3</div>
+      <h3 class="fr">Playlists & streaming</h3><h3 class="en">Playlists & streaming</h3>
+      <p class="fr">Viser les playlists éditoriales MENA — c'est un levier majeur :</p>
+      <p class="en">Target MENA editorial playlists — a major lever:</p>
+      <div class="tag-list">
+        <span class="pin">Anghami · Hype Arabia</span>
+        <span class="pin">Spotify · Arab X / Sawt el Ghina</span>
+        <span class="pin">Deezer · Arabpop</span>
+        <span class="pin">Apple · Arabica</span>
+        <span class="pin" style="border-style:dashed">Fresh Finds / New Music</span>
+      </div>
+      <p class="fr" style="margin-top:10px">Pitch via le distributeur (idéalement local au Moyen-Orient) + réseau éditorial.</p>
+      <p class="en" style="margin-top:10px">Pitch via the distributor (ideally local in the Middle East) + editorial network.</p>
+    </div>
+    <!-- 4 associations -->
+    <div class="pill">
+      <div class="n">4</div>
+      <h3 class="fr">5 grandes associations libanaises en France</h3><h3 class="en">5 major Lebanese associations in France</h3>
+      <p class="fr">Pour diffuser le titre, obtenir des prestations et des apparitions :</p>
+      <p class="en">To spread the track, secure sets and appearances:</p>
+      <ul>
+        <li><strong style="color:var(--green)">Institut du Monde Arabe (IMA)</strong> <span class="fr">— Paris, le hub culturel du monde arabe (concerts, Arabofolies).</span><span class="en">— Paris, the Arab-world cultural hub (concerts, Arabofolies).</span></li>
+        <li><strong style="color:var(--green)">Union Libanaise Culturelle Mondiale</strong> <span class="fr">(ULCM) — chapitres en France.</span><span class="en">(worldwide Lebanese cultural union) — French chapters.</span></li>
+        <li><strong style="color:var(--green)">HALFA France</strong> <span class="fr">— réseau franco-libanais, membre de l'ULCM.</span><span class="en">— French-Lebanese network, ULCM member.</span></li>
+        <li><strong style="color:var(--green)">RJLiban</strong> <span class="fr">— réseau des jeunes Libanais, forte portée digitale.</span><span class="en">— young Lebanese network, strong digital reach.</span></li>
+        <li><strong style="color:var(--green)">Le Cèdre sur Seine / Lebanus</strong> <span class="fr">— culture & événements franco-libanais à Paris.</span><span class="en">— French-Lebanese culture & events in Paris.</span></li>
+      </ul>
+      <p class="cap fr" style="margin-top:6px">Shortlist à confirmer/prioriser selon les contacts existants.</p>
+      <p class="cap en" style="margin-top:6px">Shortlist to confirm/prioritise based on existing contacts.</p>
+    </div>
+    <!-- 5 salles Liban -->
+    <div class="pill">
+      <div class="n">5</div>
+      <h3 class="fr">Scènes & lieux musicaux au Liban</h3><h3 class="en">Stages & music venues in Lebanon</h3>
+      <p class="fr">Des lieux où elle pourrait venir s'exprimer (showcase, live acoustique, vernissage-concert) :</p>
+      <p class="en">Places where she could perform (showcase, acoustic live, "vernissage-concert"):</p>
+      <div class="tag-list">
+        <span class="pin">Metro Al Madina (Hamra)</span>
+        <span class="pin">MusicHall (Beyrouth)</span>
+        <span class="pin">Radio Beirut (Mar Mikhael)</span>
+        <span class="pin">Salon Beyrouth (Hamra)</span>
+        <span class="pin">Demo (Mar Mikhael)</span>
+      </div>
+      <p class="fr" style="margin-top:10px">Format signature : elle <strong>chante et peint en direct</strong> — un « vernissage-concert » unique, parfait pour ces scènes intimes.</p>
+      <p class="en" style="margin-top:10px">Signature format: she <strong>sings and paints live</strong> — a unique "vernissage-concert", ideal for these intimate stages.</p>
+    </div>
+    <!-- 6 prises de parole festivals -->
+    <div class="pill">
+      <div class="n">6</div>
+      <h3 class="fr">Prises de parole dès septembre</h3><h3 class="en">Public platforms from September</h3>
+      <p class="fr">Des rendez-vous ouverts sur le Moyen-Orient où porter le titre à partir de septembre :</p>
+      <p class="en">Middle-East-facing events to carry the track from September:</p>
+      <ul>
+        <li class="fr"><strong style="color:var(--green)">Arabofolies</strong> & l'agenda musical de l'<strong style="color:var(--green)">IMA</strong> (Paris).</li>
+        <li class="en"><strong style="color:var(--green)">Arabofolies</strong> & the <strong style="color:var(--green)">IMA</strong> music agenda (Paris).</li>
+        <li class="fr">Saisons & soirées culturelles libanaises / franco-arabes (rentrée), via les associations.</li>
+        <li class="en">Lebanese / French-Arab cultural seasons & evenings (autumn), via the associations.</li>
+        <li class="fr">Festivals du monde arabe et de la Méditerranée en France & au Liban — à cibler avec l'attaché·e.</li>
+        <li class="en">Arab-world & Mediterranean festivals in France & Lebanon — to target with the press officer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:38px" class="fr">Le moteur : monter la sauce, en continu</h3>
+  <h3 style="margin-top:38px" class="en">The engine: build the momentum, continuously</h3>
+  <div class="grid g3">
+    <div class="card"><h3 class="fr">Capter partout</h3><h3 class="en">Capture everywhere</h3><p class="fr">À chaque étape (studio, clip, live, coulisses), on prend des images et on garde Roro Nela au centre.</p><p class="en">At every step (studio, video, live, backstage), we grab footage and keep Roro Nela at the centre.</p></div>
+    <div class="card"><h3 class="fr">Poster & repartager</h3><h3 class="en">Post & re-share</h3><p class="fr">1 post/jour, on repartage l'UGC (mouvement « Nour »), on répond aux fans — surtout les réseaux du Liban & du Moyen-Orient.</p><p class="en">1 post/day, re-share UGC (the "Nour" movement), reply to fans — especially Lebanon & Middle-East communities.</p></div>
+    <div class="card"><h3 class="fr">Mesurer l'impact</h3><h3 class="en">Measure impact</h3><p class="fr">Partages, enregistrements, pré-saves, retombées presse : on suit ce qui prend et on pousse là où ça résonne.</p><p class="en">Shares, saves, pre-saves, press pickups: track what lands and push where it resonates.</p></div>
+  </div>
+
+  <div class="callout" style="margin-top:32px">
+    <p class="fr">« Une lumière, pas un camp. » — On célèbre la femme, la culture et l'espoir, jamais la politique, jamais d'images de guerre comme décor.</p>
+    <p class="en">"A light, not a side." — We celebrate women, culture and hope, never politics, never images of war as backdrop.</p>
+    <span class="fr">La règle d'or</span><span class="en">The golden rule</span>
+  </div>
+</section>
+
+<!-- RESSOURCES -->
+<section id="ressources" style="background:var(--paper-2)">
+  <span class="eyebrow fr">Le dossier</span><span class="eyebrow en">The dossier</span>
+  <h2 class="fr">Tout au même endroit</h2><h2 class="en">Everything in one place</h2>
+  <div class="rule"></div>
+  <div class="res">
+    <a href="cover-animee.html"><b class="fr">Cover animée</b><b class="en">Animated cover</b><small class="fr">Annonce du 17 juillet, format réseaux.</small><small class="en">July 17 announcement, social format.</small></a>
+    <a href="kit-presse.html"><b class="fr">Kit de presse</b><b class="en">Press kit</b><small class="fr">Cover, univers, bio, prises de parole, contacts.</small><small class="en">Cover, universe, bio, statements, contacts.</small></a>
+    <a href="#ecouter"><b class="fr">Écouter le master</b><b class="en">Listen to the master</b><small class="fr">Arabia — version finale (Wave 4).</small><small class="en">Arabia — final version (Wave 4).</small></a>
+    <a href="https://linktr.ee/roro_nela" target="_blank" rel="noopener"><b>Linktree</b><small class="fr">Tous les liens de Roro Nela.</small><small class="en">All of Roro Nela's links.</small></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <span class="eyebrow fr">Suivre & contacter</span><span class="eyebrow en">Follow & contact</span>
+  <h2 class="fr">Roro Nela</h2><h2 class="en">Roro Nela</h2>
+  <div class="rule"></div>
+  <div class="socials">
+    <a class="soc" href="https://www.instagram.com/roro_nela" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.36 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.36-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 3.4A6.4 6.4 0 1 0 18.4 12 6.4 6.4 0 0 0 12 5.6zm0 10.6A4.2 4.2 0 1 1 16.2 12 4.2 4.2 0 0 1 12 16.2zm6.6-10.9a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z"/></svg>@roro_nela</a>
+    <a class="soc" href="https://www.youtube.com/@roro_nela" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.7 1.7c1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4a2.5 2.5 0 0 0 1.7-1.7C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg>YouTube</a>
+    <a class="soc" href="https://open.spotify.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.6.6 0 0 1-.9.2c-2.4-1.5-5.5-1.8-9.1-1a.6.6 0 1 1-.3-1.2c3.9-.9 7.4-.5 10.1 1.1.3.2.4.6.2.9zm1.2-2.7a.8.8 0 0 1-1 .3c-2.8-1.7-7-2.2-10.2-1.2a.8.8 0 1 1-.5-1.5c3.7-1.1 8.3-.6 11.5 1.4.3.2.5.7.2 1zm.1-2.8C15.6 8.1 9.9 7.9 6.6 8.9a.9.9 0 1 1-.6-1.8c3.8-1.1 10.1-.9 13.9 1.4a.9.9 0 1 1-1 1.6z"/></svg>Spotify</a>
+    <a class="soc" href="https://linktr.ee/roro_nela" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M11 2h2v6.2l4.4-4.4 1.4 1.4L14.4 10H21v2h-6.6l4.4 4.4-1.4 1.4L13 13.8V22h-2v-8.2l-4.4 4.4-1.4-1.4L9.6 12H3v-2h6.6L5.2 5.6 6.6 4.2 11 8.6z"/></svg>linktr.ee/roro_nela</a>
+  </div>
+  <p style="margin-top:24px;font-family:var(--sans);font-size:15px;color:var(--ink-soft)">
+    <span class="fr">Contact presse & label : </span><span class="en">Press & label contact: </span>
+    <strong style="color:var(--green)">AZODER — Amos Bosse</strong> · <a href="mailto:azoderconsulting@gmail.com">azoderconsulting@gmail.com</a> · <a href="https://www.azoder.fr" target="_blank" rel="noopener">www.azoder.fr</a>
+  </p>
+  <p class="disc fr">Sortie prévue le 17 juillet 2026. Textes en arabe à valider par un locuteur natif. Noms d'associations, radios, salles et festivals fournis comme pistes de travail — à confirmer et prioriser selon les contacts et l'actualité. Plan de contingence prévu si le contexte l'exige : sensibilité Liban, dignité, jamais d'instrumentalisation.</p>
+  <p class="disc en">Release planned for July 17, 2026. Arabic texts to be validated by a native speaker. Names of associations, radios, venues and festivals are provided as working leads — to confirm and prioritise based on contacts and current events. Contingency plan in place if the context requires it: Lebanon sensitivity, dignity, no instrumentalisation.</p>
+</section>
+
+<footer>
+  ARABIA · RORO NELA — <span class="fr">Présentation & écoute · Sortie le 17 juillet 2026</span><span class="en">Presentation & listening · Out July 17, 2026</span><br>
+  AZODER · Amos Bosse · <a href="https://www.azoder.fr" target="_blank" rel="noopener">www.azoder.fr</a>
+</footer>
+
+<script>
+  function setLang(l){document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);try{localStorage.setItem('roro_lang',l)}catch(e){}}
+  try{const s=localStorage.getItem('roro_lang');if(s)setLang(s)}catch(e){}
+</script>
+</body>
+</html>
