@@ -26,7 +26,7 @@
   /* ---------- STAGE ---------- */
   .stage{position:relative;overflow:hidden;border-radius:10px;background:#06201a;
     box-shadow:0 40px 120px -30px #000,0 0 0 1px #ffffff10;isolation:isolate;
-    width:min(86vw,560px);aspect-ratio:1/1}
+    width:min(86vw,560px);aspect-ratio:1/1;container-type:inline-size}
   .stage.v916{width:min(58vw,360px);aspect-ratio:9/16}
 
   /* backdrop: cover blurred = ambience, continuous slow zoom */
@@ -55,7 +55,7 @@
     font-size:clamp(10px,2vw,13px);color:var(--gold-soft)}
   .wrap{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9% 8%}
   .play .titleblock{animation:fade 1.2s cubic-bezier(.16,.8,.24,1) .55s forwards}
-  h1{font-family:var(--title);font-weight:400;color:#fff;line-height:.9;font-size:clamp(52px,15vw,120px);text-shadow:0 4px 40px #00000080;
+  h1{font-family:var(--title);font-weight:400;color:#fff;line-height:.9;font-size:clamp(44px,12vw,96px);text-shadow:0 4px 40px #00000080;
     letter-spacing:.28em;opacity:.2;clip-path:inset(0 52% 0 48%)}
   .play h1{animation:reveal 1.35s cubic-bezier(.16,.8,.24,1) .55s forwards}
   @keyframes reveal{to{clip-path:inset(0 0 0 0);opacity:1;letter-spacing:.1em}}
@@ -79,11 +79,22 @@
   .phaseline{font-family:var(--sans);letter-spacing:.28em;text-transform:uppercase;font-size:clamp(8.5px,1.7vw,11px);color:var(--gold-soft)}
   @keyframes fade{to{opacity:1}}
   .stage[data-title="off"] .titleblock{display:none}
-  /* story 9:16 : le cadre est plus étroit → on resserre la typo pour rester dans le visuel */
-  .stage.v916 h1{font-size:clamp(36px,10vw,72px)}
+  /* story 9:16 : repli pour navigateurs sans container queries */
+  .stage.v916 h1{font-size:clamp(32px,9vw,58px)}
   .stage.v916 .ar{font-size:clamp(20px,4.2vw,28px)}
   .stage.v916 .rot span{font-size:clamp(14px,2.6vw,18px)}
   .stage.v916 .date{font-size:clamp(14px,3vw,21px)}
+
+  /* typo calée sur la LARGEUR DU CADRE (cqw) : jamais coupée, quel que soit le format */
+  @supports (width: 1cqw){
+    .stage h1,.stage.v916 h1{font-size:15.5cqw}
+    .stage .ar,.stage.v916 .ar{font-size:5.6cqw}
+    .stage .rot span,.stage.v916 .rot span{font-size:3.7cqw}
+    .stage .rot{height:2.8em}
+    .stage .date,.stage.v916 .date{font-size:4.6cqw}
+    .stage .phaseline{font-size:max(8px,2.2cqw)}
+    .stage .artist{font-size:max(10px,2.5cqw)}
+  }
 
   /* ---------- CONTROLS ---------- */
   .cap{max-width:560px;text-align:center;color:#cdbd9c;font-family:var(--serif);font-size:15px;line-height:1.5}
