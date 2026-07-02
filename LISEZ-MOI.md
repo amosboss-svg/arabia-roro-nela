@@ -43,7 +43,7 @@ Dans `index.html`, section « Écouter », le bouton **Regarder sur YouTube** po
 ## 5. Ce qui est déjà dans la présentation
 - **Paroles & traductions** (عربية · Français · English) juste au-dessus de l'écoute — *structure prête, à remplir* : il me faut le **texte réel des paroles** (en arabe, ou une transcription) pour les traduire mot pour mot fidèlement. Je n'invente pas de paroles. Repère `id="paroles-chanson"` dans `index.html`.
 - **Écoute du master final** (Wave 4) intégrée + bouton YouTube + pré-save (à activer).
-- **Bio courte** multi-origines (libanaise, élevée Liban/Dubaï, aujourd'hui France/Europe).
+- **Bio courte** multi-origines (née libanaise, a grandi entre le Liban, la République tchèque et Dubaï, aujourd'hui France/Europe).
 - **Le message d'Arabia** : récit reconstruit à partir de ses mots de l'ancien kit (« une déclaration d'amour, de fierté et d'unité », « aucune honte à être arabe… il faut en être fier », « j'ai grandi entre ces deux mondes… une manière de les réunir », l'oud & les percussions).
 - **Rétro-planning** (frise) : Fondations → Montée → **Jour J 17 juillet** (sortie + visuels acoustiques oud/percussions) → **≈ J+7 clip au Liban (réal. Tareck Raffoul)** → rentrée cap Moyen-Orient → **EP décembre 2026**. La partie « clip au Liban » est désormais présentée dans ce rétro-planning (et non plus en vrac).
 - Le kit ajoute une section **Reconnaissance & presse** (Radio Monte Carlo Doualiya, Musivv Awards, direction visuelle Tareck Raffoul, citation presse).
