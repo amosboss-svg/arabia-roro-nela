@@ -32,7 +32,7 @@ Ouvre **index.html** dans un navigateur (double-clic). En haut à droite : bouto
 Dans `index.html`, section « Écouter », le bouton **Regarder sur YouTube** pointe pour l'instant vers la chaîne `@roro_nela`. Une fois la vidéo/visualizer en ligne, remplace le lien : cherche `id="ytLink"` (une seule ligne, commentaire `▼ Remplacer le href…`) et colle l'URL de la vidéo.
 
 ## 4. La cover animée — options & export
-`cover-animee.html` : le master tourne en fond (bouton **🔊 Activer le son** — l'autoplay avec son est bloqué par les navigateurs, il faut un clic). Boutons :
+`cover-animee.html` : **l'animation tourne en boucle** (~10 s) et **redémarre à chaque changement de version** (titre/phase/format). Le son se lance avec le gros bouton doré **🔊 Écouter l'extrait du master** (saute au refrain, fondu de volume, égaliseur animé quand ça joue — un clic est obligatoire, les navigateurs bloquent l'autoplay sonore). Boutons :
 - **Avec titre / Sans titre** — version avec le mot ARABIA + accroche, ou visuel épuré (juste l'artiste + la date).
 - **Teaser · 17 juil. / Jour J · Dispo** — « Sortie le 17 juillet 2026 » ou « Disponible maintenant » (à utiliser le jour J).
 - **Carré 1:1 / Story 9:16** — les deux formats réseaux.

@@ -21,7 +21,7 @@
     --title:'Marcellus',serif; --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',sans-serif; --ar:'Amiri',serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#05130d;color:#f4ead2;font-family:var(--sans);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:26px}
+  body{background:#05130d;color:#f4ead2;font-family:var(--sans);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:26px}
 
   /* ---------- STAGE ---------- */
   .stage{position:relative;overflow:hidden;border-radius:10px;background:#06201a;
@@ -29,50 +29,79 @@
     width:min(86vw,560px);aspect-ratio:1/1}
   .stage.v916{width:min(58vw,360px);aspect-ratio:9/16}
 
-  /* backdrop = the cover, darkened, slow ken-burns; NO eye/ring focus */
+  /* backdrop: cover blurred = ambience, continuous slow zoom */
   .bg{position:absolute;inset:0;background:center/cover no-repeat;filter:brightness(.5) saturate(.95) blur(3px);
-    transform:scale(1.1);animation:ken 14s ease-in-out infinite alternate}
-  @keyframes ken{from{transform:scale(1.06)}to{transform:scale(1.14)}}
+    animation:ken 12s ease-in-out infinite alternate}
+  @keyframes ken{from{transform:scale(1.07)}to{transform:scale(1.16)}}
   .veil{position:absolute;inset:0;background:
     radial-gradient(120% 90% at 50% 34%,transparent 40%,#04140dcc 100%),
     linear-gradient(to bottom,#05170f66 0%,#05170f22 34%,#05170fbb 78%,#04120c 100%)}
   .sheen{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;
     background:linear-gradient(102deg,transparent 40%,#f6e6b520 49%,#fff4d033 50.5%,#f6e6b520 52%,transparent 60%);
-    background-size:260% 100%;background-position:170% 0;animation:sheen 8s ease-in-out 1.4s infinite}
-  @keyframes sheen{0%{background-position:170% 0}30%,100%{background-position:-70% 0}}
+    background-size:260% 100%;background-position:170% 0;animation:sheen 5.5s ease-in-out 1s infinite}
+  @keyframes sheen{0%{background-position:170% 0}45%,100%{background-position:-70% 0}}
 
-  /* content */
-  .wrap{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;padding:9% 8%}
-  .artist{position:absolute;top:8.5%;left:0;right:0;font-family:var(--sans);letter-spacing:.5em;text-transform:uppercase;
-    font-size:clamp(10px,2vw,13px);color:var(--gold-soft);opacity:0;animation:fade 1s ease .3s forwards}
-  .titleblock{opacity:0;animation:fade 1.3s cubic-bezier(.16,.8,.24,1) .7s forwards}
-  h1{font-family:var(--title);font-weight:400;letter-spacing:.1em;color:#fff;line-height:.9;
-    font-size:clamp(52px,15vw,120px);text-shadow:0 4px 40px #00000080;
-    clip-path:inset(0 0 0 0);animation:reveal 1.4s cubic-bezier(.16,.8,.24,1) .7s both}
-  @keyframes reveal{from{clip-path:inset(0 52% 0 48%);opacity:.2;letter-spacing:.28em}to{clip-path:inset(0 0 0 0);opacity:1;letter-spacing:.1em}}
-  .ar{font-family:var(--ar);font-size:clamp(22px,5vw,34px);color:var(--gold-soft);margin-top:.28em;opacity:0;animation:fade 1s ease 1.5s forwards}
-  .rot{position:relative;height:2.1em;margin-top:.5em;width:100%}
+  /* gold particles — continuous life */
+  .dust{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+  .dust i{position:absolute;bottom:-8px;border-radius:50%;background:var(--gold-soft);opacity:0;filter:blur(.4px);animation:rise linear infinite}
+  @keyframes rise{0%{opacity:0;transform:translateY(0)}10%{opacity:.75}90%{opacity:.15}100%{opacity:0;transform:translateY(-115vh)}}
+  .stage .dust i{animation-name:riseS}
+  @keyframes riseS{0%{opacity:0;transform:translateY(0)}10%{opacity:.75}100%{opacity:0;transform:translateY(-620px)}}
+
+  /* ---------- CONTENT (all entrance anims keyed to .play, restartable) ---------- */
+  .artist,.titleblock,.foot{opacity:0}
+  .play .artist{animation:fade 1s ease .25s forwards}
+  .artist{position:absolute;top:8.5%;left:0;right:0;z-index:4;text-align:center;font-family:var(--sans);letter-spacing:.5em;text-transform:uppercase;
+    font-size:clamp(10px,2vw,13px);color:var(--gold-soft)}
+  .wrap{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9% 8%}
+  .play .titleblock{animation:fade 1.2s cubic-bezier(.16,.8,.24,1) .55s forwards}
+  h1{font-family:var(--title);font-weight:400;color:#fff;line-height:.9;font-size:clamp(52px,15vw,120px);text-shadow:0 4px 40px #00000080;
+    letter-spacing:.28em;opacity:.2;clip-path:inset(0 52% 0 48%)}
+  .play h1{animation:reveal 1.35s cubic-bezier(.16,.8,.24,1) .55s forwards}
+  @keyframes reveal{to{clip-path:inset(0 0 0 0);opacity:1;letter-spacing:.1em}}
+  .ar{font-family:var(--ar);font-size:clamp(22px,5vw,34px);color:var(--gold-soft);margin-top:.28em;opacity:0}
+  .play .ar{animation:fade 1s ease 1.35s forwards}
+  .rot{position:relative;height:2.3em;margin-top:.5em;width:100%}
   .rot span{position:absolute;left:0;right:0;font-family:var(--serif);font-style:italic;color:#f4ead2;line-height:1.25;
     font-size:clamp(15px,3.4vw,23px);opacity:0}
-  .rot span.on{animation:rotln 2.8s ease both}
+  .rot span.on{animation:rotln 3s ease both}
   @keyframes rotln{0%{opacity:0;transform:translateY(8px)}14%,80%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-8px)}}
 
-  /* bottom date lockup */
-  .foot{position:absolute;left:0;right:0;bottom:8.5%;z-index:4;display:flex;flex-direction:column;align-items:center;gap:9px;
-    opacity:0;animation:fade 1s ease 1.9s forwards;padding:0 8%}
-  .rule{height:1.3px;width:min(52%,220px);background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-  .date{font-family:var(--title);letter-spacing:.16em;text-transform:uppercase;color:#fff;
-    font-size:clamp(15px,3.4vw,24px);text-shadow:0 2px 20px #000;white-space:nowrap}
+  .foot{position:absolute;left:0;right:0;bottom:8.5%;z-index:4;display:flex;flex-direction:column;align-items:center;gap:9px;padding:0 8%}
+  .play .foot{animation:fade 1s ease 1.75s forwards}
+  .rule{height:1.3px;width:min(52%,220px);background:linear-gradient(90deg,transparent,var(--gold),transparent);position:relative;overflow:hidden}
+  .rule::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#fff8e6,transparent);transform:translateX(-110%);animation:rulesheen 4s ease 2.6s infinite}
+  @keyframes rulesheen{0%{transform:translateX(-110%)}40%,100%{transform:translateX(110%)}}
+  .date{font-family:var(--title);letter-spacing:.14em;text-transform:uppercase;color:#fff;
+    font-size:clamp(15px,3.4vw,24px);text-shadow:0 2px 24px #000;white-space:nowrap;animation:datepulse 4s ease-in-out 3s infinite}
   .date b{color:var(--gold-bright);font-weight:400}
+  @keyframes datepulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
   .phaseline{font-family:var(--sans);letter-spacing:.28em;text-transform:uppercase;font-size:clamp(8.5px,1.7vw,11px);color:var(--gold-soft)}
   @keyframes fade{to{opacity:1}}
-
-  /* mode: sans titre → hide added wordmark + rotator, keep artist + date */
   .stage[data-title="off"] .titleblock{display:none}
+  /* story 9:16 : le cadre est plus étroit → on resserre la typo pour rester dans le visuel */
+  .stage.v916 h1{font-size:clamp(36px,10vw,72px)}
+  .stage.v916 .ar{font-size:clamp(20px,4.2vw,28px)}
+  .stage.v916 .rot span{font-size:clamp(14px,2.6vw,18px)}
+  .stage.v916 .date{font-size:clamp(14px,3vw,21px)}
 
-  /* ---------- controls ---------- */
+  /* ---------- CONTROLS ---------- */
   .cap{max-width:560px;text-align:center;color:#cdbd9c;font-family:var(--serif);font-size:15px;line-height:1.5}
+  .soundrow{display:flex;align-items:center;gap:14px}
+  .bigsound{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+    color:#20180d;background:linear-gradient(180deg,var(--gold-bright),var(--gold));border:0;border-radius:100px;
+    padding:15px 30px;cursor:pointer;transition:.2s;box-shadow:0 8px 30px -8px #c9a24b88}
+  .bigsound:hover{filter:brightness(1.07)}
+  .bigsound.on{background:#0e3a2b;color:var(--gold-bright);box-shadow:inset 0 0 0 1px #c9a24b66}
+  /* equalizer = proof that sound is playing */
+  .eq{display:none;align-items:flex-end;gap:3px;height:22px}
+  .eq.on{display:flex}
+  .eq i{width:4px;border-radius:2px;background:var(--gold-soft);animation:eqb 1s ease-in-out infinite}
+  .eq i:nth-child(1){height:60%}.eq i:nth-child(2){height:100%;animation-delay:.15s}
+  .eq i:nth-child(3){height:45%;animation-delay:.3s}.eq i:nth-child(4){height:80%;animation-delay:.45s}
+  @keyframes eqb{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+  .soundhint{font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:#8d7f63;text-transform:uppercase}
+
   .controls{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:640px}
   .grp{display:flex;gap:2px;background:#ffffff10;border:1px solid #ffffff20;border-radius:100px;padding:3px}
   .grp button{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#e4d8bf;
@@ -82,21 +111,19 @@
   .act button,.act a{font-family:var(--sans);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#f4ead2;
     background:#ffffff12;border:1px solid #ffffff26;padding:10px 16px;border-radius:100px;cursor:pointer;text-decoration:none;transition:.15s}
   .act button:hover,.act a:hover{background:#ffffff22;border-color:var(--gold)}
-  .act .primary{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#20180d;border:0;font-weight:500}
   .fmt{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7c6f57;text-align:center;line-height:1.7}
-  audio{display:none}
-  canvas{display:none}
+  audio,canvas{display:none}
 </style>
 </head>
 <body>
 
-  <div class="stage" id="stage" data-title="on" data-phase="teaser">
-    <div class="bg" id="bg" style="background-image:url('assets/cover-provisoire.jpg')"></div>
+  <div class="stage play" id="stage" data-title="on" data-phase="teaser">
+    <div class="bg" style="background-image:url('assets/cover-provisoire.jpg')"></div>
     <div class="veil"></div>
+    <div class="dust" id="dust"></div>
     <div class="sheen"></div>
 
     <div class="artist">Roro Nela</div>
-
     <div class="wrap">
       <div class="titleblock">
         <h1>ARABIA</h1>
@@ -108,7 +135,6 @@
         </div>
       </div>
     </div>
-
     <div class="foot">
       <div class="rule"></div>
       <div class="date" id="dateLine">Sortie le <b>17 juillet 2026</b></div>
@@ -119,8 +145,12 @@
   <audio id="aud" src="assets/Arabia-Master-Final4.m4a" loop preload="auto"></audio>
   <canvas id="cv"></canvas>
 
-  <p class="cap">Visuel animé d'annonce — le master tourne en fond (active le son pour l'entendre).<br>
-  Pour la vidéo : enregistre l'écran (⌘⇧5) sur la zone du visuel, 2 boucles suffisent.</p>
+  <!-- SON : gros bouton évident + égaliseur qui prouve que ça joue -->
+  <div class="soundrow">
+    <button class="bigsound" id="sound">🔊 Écouter l'extrait du master</button>
+    <div class="eq" id="eq"><i></i><i></i><i></i><i></i></div>
+  </div>
+  <div class="soundhint" id="soundhint">Clique pour lancer le son — il joue en boucle avec le visuel</div>
 
   <div class="controls">
     <div class="grp" id="gTitle">
@@ -137,75 +167,106 @@
     </div>
   </div>
 
+  <p class="cap">L'animation tourne en boucle et redémarre à chaque changement de version.<br>
+  Pour la vidéo : active le son, puis enregistre l'écran (⌘⇧5) sur la zone du visuel — 1 à 2 boucles suffisent.</p>
+
   <div class="act">
-    <button id="sound">🔊 Activer le son</button>
-    <button onclick="replay()">↻ Rejouer</button>
-    <button class="primary" id="dl">⬇︎ Télécharger le visuel (PNG)</button>
+    <button onclick="restart()">↻ Rejouer l'animation</button>
+    <button id="dl">⬇︎ Télécharger le visuel (PNG)</button>
     <a href="index.html">← Présentation</a>
     <a href="kit-presse.html">Kit de presse →</a>
   </div>
-  <div class="fmt" id="fmtNote">Format recommandé : <b>MP4 (H.264) · 1080×1080 · ~8&nbsp;s en boucle</b> pour le feed · 1080×1920 pour les stories/reels.</div>
+  <div class="fmt" id="fmtNote">Format recommandé : <b>MP4 (H.264) · 1080×1080 · ~10&nbsp;s en boucle</b> pour le feed · 1080×1920 pour les stories/reels.</div>
 
 <script>
   const stage=document.getElementById('stage');
   const aud=document.getElementById('aud');
 
-  /* ---- rotating tagline ---- */
+  /* ---- particles: continuous ---- */
+  const dust=document.getElementById('dust');
+  for(let i=0;i<30;i++){
+    const s=document.createElement('i');
+    s.style.left=Math.random()*100+'%';
+    const sc=.5+Math.random()*1.7;s.style.width=(3*sc)+'px';s.style.height=(3*sc)+'px';
+    s.style.animationDuration=(5+Math.random()*7)+'s';
+    s.style.animationDelay=(Math.random()*9)+'s';
+    dust.appendChild(s);
+  }
+
+  /* ---- rotating taglines: continuous ---- */
   const lines=[...document.querySelectorAll('#rot span')];let ri=0;
   function tick(){lines.forEach(s=>s.classList.remove('on'));const el=lines[ri%lines.length];void el.offsetWidth;el.classList.add('on');ri++;}
-  tick();setInterval(tick,2800);
+  tick();setInterval(tick,3000);
 
-  /* ---- content / phase / format toggles ---- */
+  /* ---- restartable entrance + auto-loop every 10 s ---- */
+  function restart(){stage.classList.remove('play');void stage.offsetWidth;stage.classList.add('play');}
+  setInterval(restart,10000);
+
+  /* ---- toggles (each restarts the animation so you SEE it) ---- */
   function bind(groupId,attr,fn){
     document.querySelectorAll('#'+groupId+' button').forEach(b=>b.onclick=()=>{
       document.querySelectorAll('#'+groupId+' button').forEach(x=>x.classList.remove('active'));
-      b.classList.add('active');fn(b.dataset[attr]);
+      b.classList.add('active');fn(b.dataset[attr]);restart();
     });
   }
   bind('gTitle','t',v=>stage.setAttribute('data-title',v));
   bind('gPhase','p',v=>{
-    stage.setAttribute('data-phase',v);
     const d=document.getElementById('dateLine'),p=document.getElementById('phaseLine');
     if(v==='drop'){d.innerHTML='Disponible <b>maintenant</b>';p.textContent='Nouveau single · 17 juillet 2026';}
     else{d.innerHTML='Sortie le <b>17 juillet 2026</b>';p.textContent='Nouveau single · Pré-save';}
   });
   bind('gFmt','f',v=>{stage.classList.toggle('v916',v==='916');
     document.getElementById('fmtNote').innerHTML = v==='916'
-      ? 'Format recommandé : <b>MP4 (H.264) · 1080×1920 · ~8&nbsp;s en boucle</b> pour stories/reels · repasse en 1:1 pour le feed.'
-      : 'Format recommandé : <b>MP4 (H.264) · 1080×1080 · ~8&nbsp;s en boucle</b> pour le feed · 1080×1920 pour les stories/reels.';
+      ? 'Format recommandé : <b>MP4 (H.264) · 1080×1920 · ~10&nbsp;s en boucle</b> pour stories/reels · repasse en 1:1 pour le feed.'
+      : 'Format recommandé : <b>MP4 (H.264) · 1080×1080 · ~10&nbsp;s en boucle</b> pour le feed · 1080×1920 pour les stories/reels.';
   });
 
-  /* ---- sound (autoplay-with-sound is blocked → needs a click) ---- */
-  const btn=document.getElementById('sound');let on=false;
-  btn.onclick=async()=>{
-    try{
-      if(!on){aud.currentTime=Math.min(40,(aud.duration||60)*0.28);await aud.play();aud.muted=false;on=true;btn.textContent='🔇 Couper le son';}
-      else{aud.pause();on=false;btn.textContent='🔊 Activer le son';}
-    }catch(e){btn.textContent='🔊 Activer le son';}
-  };
+  /* ---- SOUND: robust play/pause on real state, debounced, volume fade ---- */
+  const btn=document.getElementById('sound'),eq=document.getElementById('eq'),hint=document.getElementById('soundhint');
+  let lock=false,fader=null;
+  function ui(on){
+    btn.classList.toggle('on',on);
+    btn.textContent=on?'🔇 Couper le son':'🔊 Écouter l’extrait du master';
+    eq.classList.toggle('on',on);
+    hint.textContent=on?'Le master joue en boucle — lance ton enregistrement d’écran':'Clique pour lancer le son — il joue en boucle avec le visuel';
+  }
+  function fadeTo(target,ms){
+    clearInterval(fader);const step=(target-aud.volume)/(ms/50);
+    fader=setInterval(()=>{let v=aud.volume+step;
+      if((step>0&&v>=target)||(step<0&&v<=target)){aud.volume=target;clearInterval(fader);if(target===0)aud.pause();}
+      else aud.volume=v;},50);
+  }
+  function seekToChorus(){try{if(isFinite(aud.duration)&&aud.duration>60)aud.currentTime=aud.duration*0.28;}catch(e){}}
+  btn.addEventListener('click',()=>{
+    if(lock)return;lock=true;setTimeout(()=>lock=false,400);
+    if(aud.paused){
+      aud.volume=0;
+      if(aud.readyState>=1)seekToChorus();else aud.addEventListener('loadedmetadata',seekToChorus,{once:true});
+      const p=aud.play();
+      if(p&&p.then)p.then(()=>{fadeTo(1,900);ui(true);}).catch(()=>{ui(false);hint.textContent='Lecture bloquée par le navigateur — reclique une fois.';});
+      else{fadeTo(1,900);ui(true);}
+    }else{fadeTo(0,500);ui(false);}
+  });
+  aud.addEventListener('playing',()=>ui(true));
+  aud.addEventListener('pause',()=>{if(aud.volume===0||aud.paused)ui(false);});
 
-  function replay(){location.reload();}
-
-  /* ---- PNG export (respects current mode/phase/format) ---- */
+  /* ---- PNG export (current mode/phase/format) ---- */
   const img=new Image();img.crossOrigin='anonymous';img.src='assets/cover-provisoire.jpg';
   document.getElementById('dl').onclick=async()=>{
     await (document.fonts?document.fonts.ready:Promise.resolve());
     const is916=stage.classList.contains('v916');
     const W=1080,H=is916?1920:1080;
     const cv=document.getElementById('cv');cv.width=W;cv.height=H;const x=cv.getContext('2d');
-    // cover-fit backdrop
     const iw=img.width||1244,ih=img.height||1244,ar=iw/ih,cr=W/H;
     let dw,dh,dx,dy;if(ar>cr){dh=H;dw=H*ar;dx=(W-dw)/2;dy=0;}else{dw=W;dh=W/ar;dx=0;dy=(H-dh)/2;}
     try{x.drawImage(img,dx,dy,dw,dh);}catch(e){}
     x.fillStyle='rgba(6,25,17,.42)';x.fillRect(0,0,W,H);
-    // gradients
     let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'rgba(5,23,15,.45)');g.addColorStop(.34,'rgba(5,23,15,.12)');g.addColorStop(.8,'rgba(4,18,12,.8)');g.addColorStop(1,'rgba(4,18,12,.98)');
     x.fillStyle=g;x.fillRect(0,0,W,H);
     const cx=W/2;
     const titleOn=stage.getAttribute('data-title')==='on';
     const drop=stage.getAttribute('data-phase')==='drop';
     x.textAlign='center';
-    // artist
     x.fillStyle='#E6C983';x.font='500 '+Math.round(W*0.026)+'px Jost, sans-serif';
     x.save();x.translate(cx,H*(is916?0.13:0.14));drawSpaced(x,'R O R O   N E L A',W*0.011);x.restore();
     if(titleOn){
@@ -216,21 +277,19 @@
       x.fillStyle='#f4ead2';x.font='italic 500 '+Math.round(W*0.034)+'px "Cormorant Garamond", serif';
       x.fillText('La fierté qui devient lumière.',cx,H*(is916?0.55:0.60));
     }
-    // date lockup
     const by=H*(is916?0.9:0.87);
     x.strokeStyle='#C9A24B';x.lineWidth=2;x.beginPath();x.moveTo(cx-W*0.16,by-H*0.06);x.lineTo(cx+W*0.16,by-H*0.06);x.stroke();
     x.fillStyle='#ffffff';x.font='400 '+Math.round(W*0.036)+'px Marcellus, serif';
     x.fillText(drop?'DISPONIBLE MAINTENANT':'SORTIE · 17 JUILLET 2026',cx,by);
     x.fillStyle='#E6C983';x.font='500 '+Math.round(W*0.019)+'px Jost, sans-serif';
     x.save();x.translate(cx,by+H*0.035);drawSpaced(x,(drop?'NOUVEAU SINGLE · 17 JUILLET 2026':'NOUVEAU SINGLE · PRÉ-SAVE'),W*0.006);x.restore();
-    // download
     try{
       cv.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);
         a.download='ARABIA_RoroNela_'+(titleOn?'avec-titre':'sans-titre')+'_'+(drop?'jourJ':'teaser')+'_'+(is916?'9x16':'1x1')+'.png';
         a.click();},'image/png');
-    }catch(e){alert("Export bloqué en local — publie le dossier (Netlify) puis réessaie, ou fais une capture d'écran.");}
+    }catch(e){alert("Export bloqué en local — utilise la version en ligne, ou fais une capture d'écran.");}
   };
-  function drawSpaced(ctx,txt,extra){ // letter-spacing helper for canvas
+  function drawSpaced(ctx,txt,extra){
     const chars=[...txt];let tot=0;const ws=chars.map(c=>{const w=ctx.measureText(c).width;tot+=w+extra;return w;});
     let cur=-((tot-extra)/2);ctx.textAlign='left';
     chars.forEach((c,i)=>{ctx.fillText(c,cur,0);cur+=ws[i]+extra;});ctx.textAlign='center';
