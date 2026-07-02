@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARABIA — Roro Nela · Visuel animé</title>
+<meta name="description" content="Visuel animé d'annonce — Arabia, nouveau single de Roro Nela, sortie le 17 juillet 2026.">
+<link rel="icon" type="image/jpeg" href="assets/cover-provisoire.jpg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ARABIA — Roro Nela · Sortie le 17 juillet 2026">
+<meta property="og:description" content="Visuel animé d'annonce du single.">
+<meta property="og:image" content="https://amosboss-svg.github.io/arabia-roro-nela/assets/cover-provisoire.jpg">
+<meta property="og:url" content="https://amosboss-svg.github.io/arabia-roro-nela/cover-animee.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
@@ -176,9 +184,7 @@
     }catch(e){btn.textContent='🔊 Activer le son';}
   };
 
-  function replay(){
-    const fresh=stage.cloneNode(true);stage.parentNode.replaceChild(fresh,stage);location.reload();
-  }
+  function replay(){location.reload();}
 
   /* ---- PNG export (respects current mode/phase/format) ---- */
   const img=new Image();img.crossOrigin='anonymous';img.src='assets/cover-provisoire.jpg';

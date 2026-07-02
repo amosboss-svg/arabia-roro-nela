@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARABIA — Roro Nela · Présentation & écoute</title>
-<meta name="description" content="Arabia — nouveau single de Roro Nela, sortie le 17 juillet 2026. Écoute du master, kit de presse et stratégie de lancement.">
+<meta name="description" content="Arabia — nouveau single de Roro Nela, sortie le 17 juillet 2026. Une déclaration d'amour, de fierté et d'unité.">
+<link rel="icon" type="image/jpeg" href="assets/cover-provisoire.jpg">
+<meta property="og:type" content="music.song">
+<meta property="og:title" content="ARABIA — Roro Nela · Sortie le 17 juillet 2026">
+<meta property="og:description" content="Une déclaration d'amour, de fierté et d'unité. Écoute du master, kit de presse et rétro-planning.">
+<meta property="og:image" content="https://amosboss-svg.github.io/arabia-roro-nela/assets/cover-provisoire.jpg">
+<meta property="og:url" content="https://amosboss-svg.github.io/arabia-roro-nela/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
@@ -23,6 +30,7 @@
   html[data-lang="fr"] .en{display:none}
   html[data-lang="en"] .fr{display:none}
   section{padding:clamp(46px,6.5vw,90px) clamp(22px,6vw,80px);max-width:1140px;margin:0 auto}
+  section[id],div[id]{scroll-margin-top:72px}
   .eyebrow{font-family:var(--sans);font-weight:400;letter-spacing:.36em;text-transform:uppercase;font-size:12px;color:var(--gold-deep)}
   h2{font-family:var(--title);font-weight:400;font-size:clamp(28px,4.4vw,46px);line-height:1.08;margin:.35em 0 .5em}
   h3{font-family:var(--title);font-weight:400;font-size:clamp(19px,2.4vw,23px);margin-bottom:.3em}
@@ -60,11 +68,6 @@
   .btn-gold:hover{filter:brightness(1.07)}
   .btn-ghost{border:1px solid #ffffff40;color:#f6efe0;background:transparent}
   .btn-ghost:hover{background:#ffffff14;border-color:var(--gold-soft)}
-  /* hero frequency rings */
-  .fx{position:absolute;left:50%;top:32%;transform:translate(-50%,-50%);pointer-events:none;opacity:.5}
-  .fx span{position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;border:1px solid var(--gold-soft);transform:translate(-50%,-50%);animation:rip 5s ease-out infinite}
-  .fx span:nth-child(2){animation-delay:1.6s}.fx span:nth-child(3){animation-delay:3.2s}
-  @keyframes rip{0%{opacity:.5;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(46)}}
 
   /* player */
   .player-wrap{background:var(--green);color:#f4ecdb;max-width:none;margin:0}
@@ -102,19 +105,6 @@
   .pill li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
   .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
   .pin{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:var(--green);background:#fff;border:1px solid var(--line);padding:6px 13px;border-radius:100px}
-
-  /* monochrome social visual demo */
-  .grey-demo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
-  .gv{aspect-ratio:1/1;border-radius:12px;position:relative;overflow:hidden;background:linear-gradient(160deg,#2b2b2b,#141414);border:1px solid #00000018;display:flex;align-items:center;justify-content:center}
-  .gv .rings{position:absolute;inset:0}
-  .gv .rings i{position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;border:1px solid #ffffff3a;transform:translate(-50%,-50%);animation:rip2 4.5s ease-out infinite}
-  .gv .rings i:nth-child(2){animation-delay:1.5s}.gv .rings i:nth-child(3){animation-delay:3s}
-  @keyframes rip2{0%{opacity:.45;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(20)}}
-  .gv span{position:relative;font-family:var(--title);color:#e9e9e9;letter-spacing:.14em;font-size:15px;z-index:2;text-align:center;padding:0 10px}
-  .gv small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;color:#9a9a9a;margin-top:6px}
-  .gv.reveal{background:linear-gradient(160deg,var(--green),var(--green-deep))}
-  .gv.reveal span{color:var(--gold-soft)}
-  .gv.reveal .rings i{border-color:#e0c58a55}
 
   /* guardrail callout */
   .callout{background:var(--green);color:#f4ecdb;border-radius:16px;padding:clamp(26px,4vw,40px);text-align:center}
@@ -241,29 +231,27 @@
   <h2 class="fr">Paroles & traductions</h2>
   <h2 class="en">Lyrics & translations</h2>
   <div class="rule"></div>
-  <p class="lead fr">Le texte tel qu'elle le chante, en arabe — puis traduit fidèlement, mot pour mot dans son sens, en français et en anglais. À lire en écoutant le titre, ci-dessous.</p>
-  <p class="lead en">The words as she sings them, in Arabic — then faithfully translated, true to their meaning, into French and English. To read while listening to the track, below.</p>
+  <p class="lead fr">Le texte tel qu'elle le chante, en arabe — accompagné de ses traductions fidèles en français et en anglais, à lire en écoutant le titre ci-dessous.</p>
+  <p class="lead en">The words as she sings them, in Arabic — with faithful French and English translations, to read while listening to the track below.</p>
   <!-- ▼▼▼ À COMPLÉTER : coller les paroles arabes ici, puis les traductions FR/EN (une ligne = une ligne). ▼▼▼ -->
   <div class="lyrics">
     <div class="lyr rtl">
       <h3>العربية</h3>
-      <div class="body pending fr">Les paroles arabes seront insérées ici, telles que Roro Nela les chante — à fournir ou à valider par l'artiste.</div>
-      <div class="body pending en">The Arabic lyrics will go here, exactly as Roro Nela sings them — to be provided or validated by the artist.</div>
+      <div class="body pending fr">النص الكامل يُنشر مع صدور الأغنية.</div>
+      <div class="body pending en">النص الكامل يُنشر مع صدور الأغنية.</div>
     </div>
     <div class="lyr">
       <h3>Français</h3>
-      <div class="body pending fr">La traduction française, fidèle au sens de chaque phrase, sera alignée ici ligne par ligne.</div>
-      <div class="body pending en">The French translation, faithful to each line's meaning, will be aligned here line by line.</div>
+      <div class="body pending fr">Le texte intégral et sa traduction seront publiés avec la sortie du titre.</div>
+      <div class="body pending en">Le texte intégral et sa traduction seront publiés avec la sortie du titre.</div>
     </div>
     <div class="lyr">
       <h3>English</h3>
-      <div class="body pending fr">La traduction anglaise, fidèle au sens, sera alignée ici ligne par ligne.</div>
-      <div class="body pending en">The English translation, faithful to the meaning, will be aligned here line by line.</div>
+      <div class="body pending fr">The full lyrics and translation will be published with the release.</div>
+      <div class="body pending en">The full lyrics and translation will be published with the release.</div>
     </div>
   </div>
   <!-- ▲▲▲ FIN paroles ▲▲▲ -->
-  <p class="cap fr" style="margin-top:14px">Paroles à insérer / valider avec l'artiste — les traductions FR & EN seront faites mot pour mot, fidèles au texte chanté.</p>
-  <p class="cap en" style="margin-top:14px">Lyrics to be inserted / validated with the artist — the FR & EN translations will be done word for word, true to the sung text.</p>
 </section>
 
 <!-- ÉCOUTER -->
@@ -277,14 +265,10 @@
       <p class="note en">Version <strong style="color:var(--gold-soft)">final master (Wave 4)</strong> — the release-ready mix. Length 3:38.</p>
       <audio controls preload="metadata" src="assets/Arabia-Master-Final4.m4a"></audio>
       <div class="listen-actions">
-        <!-- ▼ Remplacer le href ci-dessous par le vrai lien YouTube une fois la vidéo/visualizer mis en ligne -->
+        <!-- ▼ NOTE INTERNE : remplacer le href par le lien de la vidéo YouTube une fois en ligne (chaîne @roro_nela) -->
         <a class="btn yt" id="ytLink" href="https://www.youtube.com/@roro_nela" target="_blank" rel="noopener"><span class="fr">▶ Regarder sur YouTube</span><span class="en">▶ Watch on YouTube</span></a>
-        <a class="btn btn-gold" href="#" onclick="return false"><span class="fr">Pré-save · à venir</span><span class="en">Pre-save · coming</span></a>
+        <span class="btn btn-ghost" style="cursor:default;border-style:dashed;opacity:.85"><span class="fr">Pré-save — bientôt disponible</span><span class="en">Pre-save — coming soon</span></span>
       </div>
-      <p class="note" style="margin-top:14px;opacity:.75">
-        <span class="fr">↳ Astuce : pour intégrer une vidéo YouTube ici, mets d'abord ta vidéo en ligne (chaîne <a href="https://www.youtube.com/@roro_nela" style="color:var(--gold-soft)">@roro_nela</a>), puis colle son lien à la place du bouton ci-dessus.</span>
-        <span class="en">↳ Tip: to embed a YouTube video here, upload it first (channel <a href="https://www.youtube.com/@roro_nela" style="color:var(--gold-soft)">@roro_nela</a>), then paste its link in place of the button above.</span>
-      </p>
     </div>
   </div>
 </div>
