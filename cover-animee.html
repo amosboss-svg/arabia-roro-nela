@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARABIA — Roro Nela · Visuel animé</title>
-<meta name="description" content="Visuel animé d'annonce — Arabia, nouveau single de Roro Nela, sortie fin juillet 2026.">
+<meta name="description" content="Visuel animé d'annonce — Arabia, nouveau single de Roro Nela.">
 <link rel="icon" type="image/jpeg" href="assets/cover-provisoire.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ARABIA — Roro Nela · Sortie fin juillet 2026">
+<meta property="og:title" content="ARABIA — Roro Nela · La sortie">
 <meta property="og:description" content="Visuel animé d'annonce du single.">
 <meta property="og:image" content="https://amosboss-svg.github.io/arabia-roro-nela/assets/cover-provisoire.jpg">
 <meta property="og:url" content="https://amosboss-svg.github.io/arabia-roro-nela/cover-animee.html">
@@ -148,7 +148,7 @@
     </div>
     <div class="foot">
       <div class="rule"></div>
-      <div class="date" id="dateLine">Sortie <b>fin juillet 2026</b></div>
+      <div class="date" id="dateLine"><b>La sortie</b></div>
       <div class="phaseline" id="phaseLine">Nouveau single · Pré-save</div>
     </div>
   </div>
@@ -223,8 +223,8 @@
   bind('gTitle','t',v=>stage.setAttribute('data-title',v));
   bind('gPhase','p',v=>{
     const d=document.getElementById('dateLine'),p=document.getElementById('phaseLine');
-    if(v==='drop'){d.innerHTML='Disponible <b>maintenant</b>';p.textContent='Nouveau single · fin juillet 2026';}
-    else{d.innerHTML='Sortie <b>fin juillet 2026</b>';p.textContent='Nouveau single · Pré-save';}
+    if(v==='drop'){d.innerHTML='Disponible <b>maintenant</b>';p.textContent='Nouveau single · Arabia';}
+    else{d.innerHTML='<b>La sortie</b>';p.textContent='Nouveau single · Pré-save';}
   });
   bind('gFmt','f',v=>{stage.classList.toggle('v916',v==='916');
     document.getElementById('fmtNote').innerHTML = v==='916'
@@ -291,9 +291,9 @@
     const by=H*(is916?0.9:0.87);
     x.strokeStyle='#C9A24B';x.lineWidth=2;x.beginPath();x.moveTo(cx-W*0.16,by-H*0.06);x.lineTo(cx+W*0.16,by-H*0.06);x.stroke();
     x.fillStyle='#ffffff';x.font='400 '+Math.round(W*0.036)+'px Marcellus, serif';
-    x.fillText(drop?'DISPONIBLE MAINTENANT':'SORTIE · FIN JUILLET 2026',cx,by);
+    x.fillText(drop?'DISPONIBLE MAINTENANT':'LA SORTIE',cx,by);
     x.fillStyle='#E6C983';x.font='500 '+Math.round(W*0.019)+'px Jost, sans-serif';
-    x.save();x.translate(cx,by+H*0.035);drawSpaced(x,(drop?'NOUVEAU SINGLE · FIN JUILLET 2026':'NOUVEAU SINGLE · PRÉ-SAVE'),W*0.006);x.restore();
+    x.save();x.translate(cx,by+H*0.035);drawSpaced(x,(drop?'NOUVEAU SINGLE · ARABIA':'NOUVEAU SINGLE · PRÉ-SAVE'),W*0.006);x.restore();
     try{
       cv.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);
         a.download='ARABIA_RoroNela_'+(titleOn?'avec-titre':'sans-titre')+'_'+(drop?'jourJ':'teaser')+'_'+(is916?'9x16':'1x1')+'.png';
